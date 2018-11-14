@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraintlayout"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Placeholder
+        android:id="@+id/placeholder"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="swapView"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_mood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/favorite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="swapView"
+        app:layout_constraintBottom_toBottomOf="@+id/mood"
+        app:layout_constraintEnd_toStartOf="@+id/assistant"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mood"
+        app:layout_constraintTop_toTopOf="@+id/mood"
+        android:src="@drawable/ic_favorite" />
+
+    <ImageView
+        android:id="@+id/assistant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="swapView"
+        app:layout_constraintBottom_toBottomOf="@+id/favorite"
+        app:layout_constraintEnd_toStartOf="@+id/feedback"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/favorite"
+        app:layout_constraintTop_toTopOf="@+id/favorite"
+        android:src="@drawable/ic_assistant" />
+
+    <ImageView
+        android:id="@+id/feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="swapView"
+        app:layout_constraintBottom_toBottomOf="@+id/assistant"
+        app:layout_constraintEnd_toStartOf="@+id/android"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/assistant"
+        app:layout_constraintTop_toTopOf="@+id/assistant"
+        android:src="@drawable/ic_feedback" />
+
+    <ImageView
+        android:id="@+id/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="swapView"
+        app:layout_constraintBottom_toBottomOf="@+id/feedback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/feedback"
+        app:layout_constraintTop_toTopOf="@+id/feedback"
+        android:src="@drawable/ic_android" />
+</androidx.constraintlayout.widget.ConstraintLayout>
